@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg: #050505;
+    --accent: #ff9d00;
+    --accent-glow: rgba(255, 157, 0, 0.3);
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    background: linear-gradient(to right, var(--accent), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    min-height: 1.6em;
+}
+
+.container { padding: 5rem 10%; }
+
+.card, .skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+    transform: translateY(-10px);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    margin: 0.5rem;
+    color: var(--accent);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--accent);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
